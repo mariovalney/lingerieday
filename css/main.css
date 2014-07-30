@@ -1,0 +1,192 @@
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; letter-spacing: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; } table {border-collapse: collapse; border-spacing: 0; }
+
+/* FONTS */
+@font-face{font-family:'MyriadPro'; src: url('../fonts/myriad/myriadpro-regular-webfont.eot'); src: url('../fonts/myriad/myriadpro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/myriad/myriadpro-regular-webfont.woff') format('woff'), url('../fonts/myriad/myriadpro-regular-webfont.ttf') format('truetype'), url('../fonts/myriad/myriadpro-regular-webfont.svgz#MyriadPro') format('svg'), url('../fonts/myriad/myriadpro-regular-webfont.svg#MyriadPro') format('svg'); font-weight:normal; font-style:normal;}
+@font-face {font-family: 'HoneyScriptRegular'; src: url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.eot'); src: url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.woff') format('woff'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.ttf') format('truetype'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.svg#honey_scriptlight') format('svg'); font-weight: normal; font-style: normal; }
+
+/* GRID INNER */
+
+.grid2 {
+    width: 170px;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    vertical-align: top;
+}
+
+.grid10 {
+    width: 950px;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    vertical-align: top;
+    font-size: 0;
+}
+
+.grid12 {
+    width: 1120px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: top;
+    font-size: 0;
+}
+
+/* GRID OUTER */
+
+.grid10.outer {
+    width: 950px;
+    margin: 0;
+}
+
+.grid12.outer {
+    width: 1140px;
+}
+
+/* GERAL */
+
+body {
+    background: #fff url(../img/background.jpg) repeat-x 0 36px;
+    font-family: 'MyriadPro';
+    letter-spacing: 0.1px;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'HoneyScriptRegular';
+    font-size: 32px;
+    color: #662A00
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.notext {
+    text-indent: -99999px;
+}
+
+/* CABEÇALHO */
+
+.top-header {
+    text-align: center;
+    margin: 0 auto 40px auto;
+}
+
+.top-header h1 {
+    display: inline-block;
+    margin: 25px 0;
+}
+
+.top-header .share {
+    display: inline-block;
+    position: absolute;
+    right: 42px;
+    bottom: 20px;
+}
+
+/* SEÇÕES */
+
+section.grid12 {
+    margin: 20px auto 0 auto;
+}
+
+.section-header {
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* INSTAGRAM */
+
+.instagram figure {
+    margin: 10px 10px;
+    overflow: hidden;
+}
+
+.instagram figure img {
+    height: 170px;
+    width: 170px;
+    border: 10px solid #E6D7AE;
+    cursor: pointer;
+}
+
+.instagram figure figcaption {
+    background: rgba(207,176,4, 0.9);
+    color: #000;
+    position: absolute;
+    padding: 5px 0 0 0;
+    width: 100%;
+    opacity: 0;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+    bottom: -10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.instagram figure figcaption a {
+    color: #652900;
+    font-size: 16px;
+    text-align: center;
+}
+
+.instagram figure:hover figcaption {
+    opacity: 1;
+}
+
+.instagram figure:hover:before {
+    opacity: 0;
+}
+
+.instagram figure:hover figcaption {
+    bottom: 0px;
+}
+
+#next-instagram {
+    width: 1120px;
+    background: #E6D7AE;
+    display: block;
+    margin: 20px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: #662A00;
+    font-size: 15px;
+}
+
+/* RODAPE*/
+
+footer {
+    background: url(../img/bg-footer.jpg) repeat-x bottom center;
+    height: 100px;
+    margin-top: 40px;
+}
+
+footer div {
+    padding: 32px;
+    height: 100px;
+}
+
+footer p {
+    color: #000;
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 15px 0 7px 0;
+}
+
+footer a {
+    color: #000;
+    display: inline-block;
+    text-transform: uppercase;
+}
