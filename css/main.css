@@ -2,8 +2,8 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; letter-spacing: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; } table {border-collapse: collapse; border-spacing: 0; }
 
 /* FONTS */
-@font-face{font-family:'MyriadPro'; src: url('../fonts/myriad/myriadpro-regular-webfont.eot'); src: url('../fonts/myriad/myriadpro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/myriad/myriadpro-regular-webfont.woff') format('woff'), url('../fonts/myriad/myriadpro-regular-webfont.ttf') format('truetype'), url('../fonts/myriad/myriadpro-regular-webfont.svgz#MyriadPro') format('svg'), url('../fonts/myriad/myriadpro-regular-webfont.svg#MyriadPro') format('svg'); font-weight:normal; font-style:normal;}
-@font-face {font-family: 'HoneyScriptRegular'; src: url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.eot'); src: url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.woff') format('woff'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.ttf') format('truetype'), url('../fonts/honey/honeyscript-light_fontsbucket.com-webfont.svg#honey_scriptlight') format('svg'); font-weight: normal; font-style: normal; }
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,700,400);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 /* GRID INNER */
 
@@ -15,41 +15,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: top;
 }
 
-.grid10 {
-    width: 950px;
-    display: inline-block;
-    margin: 0 10px;
-    position: relative;
-    vertical-align: top;
-    font-size: 0;
-}
-
 .grid12 {
-    width: 1120px;
+    width: 90%;
     display: block;
     margin: 0 auto;
     position: relative;
     vertical-align: top;
     font-size: 0;
-}
-
-/* GRID OUTER */
-
-.grid10.outer {
-    width: 950px;
-    margin: 0;
-}
-
-.grid12.outer {
-    width: 1140px;
+    text-align: center;
 }
 
 /* GERAL */
 
 body {
-    background: #fff url(../img/background.jpg) repeat-x 0 36px;
-    font-family: 'MyriadPro';
+    background-image: linear-gradient(to bottom, #261121, #470337);
+    font-family: 'Open Sans';
     letter-spacing: 0.1px;
+    font-size: 16px;
 }
 
 p {
@@ -57,9 +39,8 @@ p {
 }
 
 h1 {
-    font-family: 'HoneyScriptRegular';
-    font-size: 32px;
-    color: #662A00
+    font-family: 'Pacifico';
+    font-size: 52px;
 }
 
 a {
@@ -84,7 +65,8 @@ a:hover {
 
 .top-header h1 {
     display: inline-block;
-    margin: 25px 0;
+    margin: 25px 0 10px 0;
+    color: #fff;
 }
 
 .top-header .share {
@@ -116,30 +98,24 @@ section.grid12 {
 .instagram figure img {
     height: 170px;
     width: 170px;
-    border: 10px solid #E6D7AE;
+    border: 10px solid #000;
     cursor: pointer;
 }
 
 .instagram figure figcaption {
-    background: rgba(207,176,4, 0.9);
-    color: #000;
+    background: rgba(87, 35, 75, 0.95);
+    color: #fff;
     position: absolute;
-    padding: 5px 0 0 0;
+    padding: 6px 0 0 0;
     width: 100%;
     opacity: 0;
     height: 30px;
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     bottom: -10px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
-}
-
-.instagram figure figcaption a {
-    color: #652900;
-    font-size: 16px;
-    text-align: center;
 }
 
 .instagram figure:hover figcaption {
@@ -156,37 +132,62 @@ section.grid12 {
 
 #next-instagram {
     width: 1120px;
-    background: #E6D7AE;
+    background: #000;
     display: block;
     margin: 20px auto;
     padding: 5px 10px;
     text-align: center;
-    color: #662A00;
+    color: #fff;
     font-size: 15px;
+    text-transform: uppercase;
+}
+
+#shadow-box {
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: none;
+    text-align: center;
+}
+
+#autoload {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 100px;
 }
 
 /* RODAPE*/
 
 footer {
-    background: url(../img/bg-footer.jpg) repeat-x bottom center;
-    height: 100px;
+    background: #000;
     margin-top: 40px;
 }
 
 footer div {
-    padding: 32px;
-    height: 100px;
+    padding: 10px;
+    text-align: left!important;
 }
 
 footer p {
-    color: #000;
+    color: #fff;
     display: inline-block;
-    margin: 0px 10px;
-    padding: 15px 0 7px 0;
+    margin: 10px 10px;
+}
+
+footer p.right {
+    float: right;
 }
 
 footer a {
-    color: #000;
+    color: #fff;
     display: inline-block;
     text-transform: uppercase;
 }

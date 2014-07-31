@@ -40,13 +40,18 @@ function paginationMedia(url) {
 
 function organizarMedia() {
     var largura = jQuery('#instagram').width();
-    var linha = 6;
+    var linha = Math.floor(largura / 175);
     var resto = fotosQnt % linha;
     jQuery('.thumb_instagram').show();
 
     for (var i = 1; i <= resto; i++) {
         jQuery('.thumb_instagram:nth-last-child('+i+')').hide();
     };
+}
+
+function autoload() {
+    paginationMedia(jQuery('#next-instagram').attr('href'));
+    jQuery('#next-instagram').text('PRONTO');
 }
 
 jQuery(document).ready(function() {
@@ -88,5 +93,14 @@ jQuery(document).ready(function() {
     jQuery('#shadow-box').on('click', function() {
         jQuery('#shadow-box').fadeOut('250');
         $shadowImg.fadeOut('100').delay(100).remove();
+    });
+
+    jQuery(document).on('scroll', function(event) {
+        var altura = jQuery('html').height();
+        var footer = jQuery('#autoload').offset().top;
+        if (footer == (altura - 100)) {
+            jQuery('#next-instagram').text('Carregando...');
+            setTimeout(autoload, 2000);
+        }
     });
 });
