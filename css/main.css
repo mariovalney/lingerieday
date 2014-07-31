@@ -28,6 +28,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* GERAL */
 
 body {
+    background-color: #470337;n
     background-image: linear-gradient(to bottom, #261121, #470337);
     font-family: 'Open Sans';
     letter-spacing: 0.1px;
@@ -131,7 +132,6 @@ section.grid12 {
 }
 
 #next-instagram {
-    width: 1120px;
     background: #000;
     display: block;
     margin: 20px auto;
@@ -190,4 +190,13 @@ footer a {
     color: #fff;
     display: inline-block;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 630px) {
+    footer p.right {
+        display:none;
+    }
+    footer div {
+        text-align: center!important;
+    }
 }
