@@ -191,3 +191,9 @@ footer a {
     display: inline-block;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 630px) {
+    footer p.right {
+        display:none;
+    }
+}
