@@ -196,4 +196,7 @@ footer a {
     footer p.right {
         display:none;
     }
+    footer div {
+        text-align: center!important;
+    }
 }
