@@ -1,4 +1,4 @@
-LingerieDay
+﻿LingerieDay
 ===========
 *Veja todas as imagens com hashtag LingerieDay no Instagram!*
 
@@ -11,3 +11,6 @@ Você pode utizá-lo como desejar, desde que cite a fonte e **troque o CLIENT_ID
 
 ####Instruções
 Para apresentar fotos de uma hashtag, basta chamar: **readMedia('HASHTAG');**
+
+####Licença
+Esse código está sob licença GNU GPL v2.0
